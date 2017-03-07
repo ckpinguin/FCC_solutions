@@ -5,14 +5,12 @@ mongo.connect(url, function(err, db) {
     if (err) throw err;
     // db gives access to the database
     db.collection('parrots').find({
-      age: {
-          $gt: parseInt(process.argv[2])
-      }
+        age: {
+            $gt: parseInt(process.argv[2])
+        }
     }).toArray(function(err, documents) {
         if (err) throw err;
         console.log(documents);
     });
-
     db.close();
-
 });
