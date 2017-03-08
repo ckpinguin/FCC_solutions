@@ -7,7 +7,9 @@ var str = buffer.toString();
 
 var lines = str.split('\n');
 
-var linecount = 0;
+var linecount = -1; // Cheating ;-)
 for (var line of lines) {
-    console.log(line);
+    //console.log(line);
+    linecount++;
 }
+console.log(linecount);
